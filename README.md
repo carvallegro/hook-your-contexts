@@ -6,6 +6,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 context/
     - simple: color
     - with modifier: color toggle (Night mode)
+    - Global modifier
 hooks/
     - useState
     - useEffect

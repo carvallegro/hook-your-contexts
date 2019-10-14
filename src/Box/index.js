@@ -1,18 +1,20 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import {ColorContextConsumer} from "../colorContext";
+
 import './Box.css';
 
-
-const Box = ({darkMode}) =>
-    <div className={`Box ${darkMode ? 'night' : 'day'}`}>
-        Good<br/>
-        {
-            darkMode ? 'Night' : 'Day'
+const Box = () =>
+    <ColorContextConsumer>
+        {value =>
+            <div className={`Box ${value.darkMode ? 'night' : 'day'}`}>
+                Good<br/>
+                {
+                    value.darkMode ? 'Night' : 'Day'
+                }
+            </div>
         }
-    </div>
+    </ColorContextConsumer>
 
-Box.propTypes = {
-    darkMode: PropTypes.bool
-}
 
 export default Box
