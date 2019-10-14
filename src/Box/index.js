@@ -5,7 +5,7 @@ import './Box.css';
 
 const Box = ({darkMode}) =>
     <div className={`Box ${darkMode ? 'night' : 'day'}`}>
-        Hello<br/>
+        Good<br/>
         {
             darkMode ? 'Night' : 'Day'
         }
