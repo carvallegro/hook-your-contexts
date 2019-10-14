@@ -1,5 +1,17 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## BRANCHES
+
+```
+context/
+    - simple: color
+    - with modifier: color toggle (Night mode)
+hooks/
+    - useState
+    - useEffect
+    - useContext
+```
+
 ## Available Scripts
 
 In the project directory, you can run:
