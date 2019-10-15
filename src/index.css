@@ -1,12 +1,17 @@
+:root {
+  --main-color: #3bbb6c;
+  --day-color:  #fbfbfa;
+  --night-color: #12192b;
+}
+
+
 body {
   margin: 0;
   font-family: arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  background-color: #3bbb6c;
-  /* light-color: #fbfbfa; */
-  /* dark-color: #12192b; */
+  background-color: var(--main-color);
 
   width: 100vw;
   height: 100vh;

@@ -1,14 +1,12 @@
 .App {
   width: 100vw;
   height: 100vh;
-  display: grid;
-  grid-template: auto / auto auto;
-  justify-items: center;
-  align-content: center;
-  grid-gap: 1rem;
-  grid-auto-flow: column;
 
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  align-content: stretch;
 }
 
 .App-logo {

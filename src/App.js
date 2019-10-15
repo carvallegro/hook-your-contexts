@@ -1,22 +1,25 @@
-import React from 'react';
-import Box from "./Box";
+import React, {useState} from 'react';
 
 import {ColorContextProvider} from "./colorContext";
 
+import VeryDeepNesting from "./VeryDeepNesting";
+import ThemeSwitcher from "./ThemeSwitcher";
+
 import './App.css';
 
-const App = () => (
-    <div className="App">
+const App = () => {
+    const [isDarkMode, setDarkMode] =  useState(false)
 
-        <ColorContextProvider value={{darkMode: false}}>
-            <Box/>
+    const toggleDarkMode = () => setDarkMode(!isDarkMode)
+
+    return (
+        <ColorContextProvider value={{darkMode: isDarkMode, toggleDarkMode}}>
+            <div className="App">
+                <ThemeSwitcher/>
+                <VeryDeepNesting/>
+            </div>
         </ColorContextProvider>
-
-        <ColorContextProvider value={{darkMode: true}}>
-            <Box/>
-        </ColorContextProvider>
-
-    </div>
-);
+    );
+};
 
 export default App;

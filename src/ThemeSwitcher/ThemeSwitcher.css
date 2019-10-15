@@ -1,0 +1,41 @@
+.theme-switch {
+    --background: #FFF;
+    --text: #000;
+
+    position: fixed;
+    top: 1vh;
+    left: 1vw;
+
+    width: 70px;
+    height: 30px;
+    background: var(--day-color);
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.theme-switch .switch {
+    width: 24px;
+    height: 24px;
+    background: var(--night-color);
+    border-radius: 100%;
+    position: absolute;
+    top: 3px;
+    left: 4px;
+    transition: 0.5s all ease;
+}
+
+.dark-theme {
+    --background: #FFF;
+    --text: #000;
+    background: var(--background);
+}
+.dark-theme.theme-switch {
+    background: var(--night-color);
+}
+.dark-theme.theme-switch .switch {
+    transform: translateX(37px);
+    background: var(--day-color);
+}
+.dark-theme a {
+    color: var(--text);
+}
