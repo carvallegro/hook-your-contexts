@@ -1,17 +1,17 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React, {useState} from 'react'
 import './Box.css'
 
-const Box = ({ darkMode }) => (
-  <div className={`Box ${darkMode ? 'night' : 'day'}`}>
-    Good
-    <br />
-    {darkMode ? 'Night' : 'Day'}
-  </div>
-)
-
-Box.propTypes = {
-  darkMode: PropTypes.bool
+const Box = () => {
+    const [darkMode, setDarkMode] = useState(false)
+    return (
+        <div
+            className={`Box ${darkMode ? 'night' : 'day'}`}
+            onClick={() => setDarkMode(!darkMode)}>
+            Good
+            <br/>
+            {darkMode ? 'Night' : 'Day'}
+        </div>
+    );
 }
 
 export default Box
