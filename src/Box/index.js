@@ -18,10 +18,7 @@ const Box = () => {
   })
 
   return (
-    <div
-      className={`Box ${darkMode ? 'night' : 'day'}`}
-      onClick={() => setDarkMode(!darkMode)}
-    >
+    <div className={`Box ${darkMode ? 'night' : 'day'}`}>
       Good
       <br />
       {darkMode ? 'Night' : 'Day'}
