@@ -11,7 +11,7 @@ const Box = () => {
           .fetch('https://yesno.wtf/api')
           .then(response => response.json())
           .then(yesOrNo => setDarkMode(yesOrNo.answer === 'yes')),
-      5000
+      3000
     )
 
     return () => clearInterval(intervalId)
