@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 
 import {ColorContextProvider} from "./colorContext";
 
@@ -7,19 +7,13 @@ import ThemeSwitcher from "./ThemeSwitcher";
 
 import './App.css';
 
-const App = () => {
-    const [isDarkMode, setDarkMode] =  useState(false)
-
-    const toggleDarkMode = () => setDarkMode(!isDarkMode)
-
-    return (
-        <ColorContextProvider value={{darkMode: isDarkMode, toggleDarkMode}}>
-            <div className="App">
-                <ThemeSwitcher/>
-                <VeryDeepNesting/>
-            </div>
-        </ColorContextProvider>
-    );
-};
+const App = () => (
+    <ColorContextProvider>
+        <div className="App">
+            <ThemeSwitcher/>
+            <VeryDeepNesting/>
+        </div>
+    </ColorContextProvider>
+);
 
 export default App;
