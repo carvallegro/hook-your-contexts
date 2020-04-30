@@ -7,13 +7,13 @@ import ThemeSwitcher from "./ThemeSwitcher";
 
 import './App.css';
 
-const App = () => (
-    <ColorContextProvider>
-        <div className="App">
-            <ThemeSwitcher/>
-            <VeryDeepNesting/>
-        </div>
-    </ColorContextProvider>
-);
+    const App = () => (
+        <ColorContextProvider>
+            <div className="App">
+                <ThemeSwitcher/>
+                <VeryDeepNesting/>
+            </div>
+        </ColorContextProvider>
+    );
 
 export default App;

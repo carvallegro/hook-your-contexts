@@ -4,13 +4,16 @@ const ColorContext = createContext()
 
 export const ColorContextConsumer = ColorContext.Consumer
 
-export const ColorContextProvider = ({children}) => {
-    const [isDarkMode, setDarkMode] = useState(false)
+    export const ColorContextProvider = ({children, darkMode}) => {
+        const [isDarkMode, setDarkMode] = useState(darkMode)
 
-    const toggleDarkMode = () => setDarkMode(!isDarkMode)
+        const toggleDarkMode = () => setDarkMode(!isDarkMode)
 
-    return <ColorContext.Provider value={{darkMode: isDarkMode, toggleDarkMode}}>
-        {children}
-    </ColorContext.Provider>
-}
+        return <ColorContext.Provider value={{darkMode: isDarkMode, toggleDarkMode}}>
+            {children}
+        </ColorContext.Provider>
+    }
+
+
+    ColorContextProvider.propTypes = {...}
 
